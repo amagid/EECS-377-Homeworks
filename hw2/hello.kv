@@ -1,4 +1,16 @@
 #:kivy 1.9
 
-Label:
-  text: 'Hello from Kivy'
+BoxLayout:
+  orientation: 'vertical'
+  Label:
+    text: app.formula_text
+  Slider:
+    min: 0
+    max: 10
+    step: 1
+    on_value: app.factor1 = int(self.value)
+  Slider:
+    min: 0
+    max: 10
+    step: 1
+    on_value: app.factor2 = int(self.value)
